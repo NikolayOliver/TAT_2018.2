@@ -1,0 +1,6 @@
+E:\для 1 курса\Прога\ChekingCSharp\ChekingCSharp\bin\Debug\ChekingCSharp.exe.config
+E:\для 1 курса\Прога\ChekingCSharp\ChekingCSharp\bin\Debug\ChekingCSharp.exe
+E:\для 1 курса\Прога\ChekingCSharp\ChekingCSharp\bin\Debug\ChekingCSharp.pdb
+E:\для 1 курса\Прога\ChekingCSharp\ChekingCSharp\obj\Debug\ChekingCSharp.csprojResolveAssemblyReference.cache
+E:\для 1 курса\Прога\ChekingCSharp\ChekingCSharp\obj\Debug\ChekingCSharp.exe
+E:\для 1 курса\Прога\ChekingCSharp\ChekingCSharp\obj\Debug\ChekingCSharp.pdb
