@@ -29,20 +29,6 @@ namespace HomeTask2
         }
         // function translate russian letters in english
         // and back
-        //public void Translate(string arg, Dictionary<char, string> translationDictionary, StringBuilder stringTranslate)
-        //{
-        //    for (int i = 0; i < arg.Length; i++)
-        //    {
-        //        foreach (KeyValuePair<char, string> dictionary in translationDictionary)
-        //        {
-        //            if (dictionary.Key == arg.ElementAt(i))
-        //            {
-        //                stringTranslate.Append(dictionary.Value);
-        //            }
-        //        }
-        //    }
-            
-        //}
         public string Translate(char symbol, Dictionary<char, string> translationDictionary)
         {
             foreach (KeyValuePair<char, string> dictionary in translationDictionary)
