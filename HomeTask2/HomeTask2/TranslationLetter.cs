@@ -10,9 +10,10 @@ namespace HomeTask2
     {
         static void Main(string[] args)
         {
-            
-            char[] symbols;
-            Dictionary<char, string> translationDictionary = new Dictionary<char, string>()
+            try
+            {
+                char[] symbols;
+                Dictionary<char, string> translationDictionary = new Dictionary<char, string>()
             {
                 // Russian -> English
                {'А',"A"}, {'Б',"B"}, {'В',"V"},
@@ -57,44 +58,49 @@ namespace HomeTask2
                {'v',"в"}, {'w',"ви"}, {'x',"икс"},
                {'y',"и"}, {'z',"з"}
             };
-            CheckingAndTranslateSymbols checkAndTranslate = new CheckingAndTranslateSymbols();
-            Console.WriteLine("Input string consisting of letters");
-            string newArg;
-            while(true)
-            {
-                if(args.Length == 0)
+                CheckingAndTranslateSymbols checkAndTranslate = new CheckingAndTranslateSymbols();
+                string newArg;
+                while (true)
                 {
-                    Console.WriteLine("You must to input string");
-                }
-                if(args.Length > 1)
-                {
-                    Console.WriteLine("Input only letters! \nTry again");
-                }
-                if(args.Length == 1)
-                {
-                    if (checkAndTranslate.CheckingSymbols(args) == false)
-                        Console.WriteLine("Input only letters! \nTry again");
-                    if (checkAndTranslate.CheckingSymbols(args) == true)
-                        break; 
-                }
-                newArg = Console.ReadLine();
-                args = newArg.Split(' ');
-            }
-            
-            StringBuilder translateString =  new StringBuilder(); 
-            string str;
 
-            foreach (string arg in args)
-            {
-                symbols = arg.ToCharArray();
-                for (int i = 0; i < symbols.Length; i++)
-                {
-                    translateString.Append(checkAndTranslate.Translate(symbols[i], translationDictionary));
+                    if (args.Length == 0)
+                    {
+                        Console.WriteLine("You must to input string");
+                    }
+                    if (args.Length > 1)
+                    {
+                        Console.WriteLine("Input only letters! \nTry again");
+                    }
+                    if (args.Length == 1)
+                    {
+                        if (checkAndTranslate.CheckingSymbols(args) == false)
+                            Console.WriteLine("Input only letters! \nTry again");
+                        if (checkAndTranslate.CheckingSymbols(args) == true)
+                            break;
+                    }
+                    newArg = Console.ReadLine();
+                    args = newArg.Split(' ');
                 }
+
+                StringBuilder translateString = new StringBuilder();
+                string str;
+
+                foreach (string arg in args)
+                {
+                    symbols = arg.ToCharArray();
+                    for (int i = 0; i < symbols.Length; i++)
+                    {
+                        translateString.Append(checkAndTranslate.Translate(symbols[i], translationDictionary));
+                    }
+                }
+                str = translateString.ToString();
+                Console.WriteLine(str);
+                Console.ReadKey();
             }
-            str = translateString.ToString();
-            Console.WriteLine(str);
-            Console.ReadKey();
+            catch (Exception e)
+            {
+                Console.WriteLine("Something error!");
+            }
         }
 
     }
