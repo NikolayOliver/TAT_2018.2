@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?> 
+<trucks>
+  <truck name="BMV">
+    <model>universal</model>
+    <count>10</count>
+    <costOne>4000</costOne>
+  </truck>
+  <truck name="Mersedes">
+    <model>sedan</model>
+    <count>20</count>
+    <costOne>6000</costOne>
+  </truck>
+</trucks>
